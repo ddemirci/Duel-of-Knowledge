@@ -1,5 +1,6 @@
 const path = require('path');
-
-// Set up path alias for shared resources
 require('module-alias/register');
-require('module-alias').addAlias('@shared', path.join(__dirname, '../../shared'));
+
+const moduleAlias = require('module-alias');
+moduleAlias.addAlias('@shared', path.join(__dirname, '../../shared'));
+moduleAlias.addAlias('@entities', path.join(__dirname, './entities'));
