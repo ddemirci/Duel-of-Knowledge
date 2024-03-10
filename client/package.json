@@ -9,6 +9,7 @@
   "author": "Doruk Demirci",
   "license": "ISC",
   "dependencies": {
+    "module-alias": "^2.2.3",
     "readline": "^1.3.0",
     "ws": "^8.16.0"
   }
