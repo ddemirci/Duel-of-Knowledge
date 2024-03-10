@@ -41,5 +41,5 @@ const questions = [
     }
 ];
 
-module.exports = historyQuestions;
+module.exports = questions;
   
