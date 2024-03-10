@@ -6,5 +6,5 @@ moduleAlias.addAlias('@shared', path.join(__dirname, '../../shared'));
 moduleAlias.addAlias('@entities', path.join(__dirname, './entities'));
 moduleAlias.addAlias('@assets', path.join(__dirname, './assets'));
 
-const startGame = require('./question_generator');
-startGame();
+const initializeGame = require('./game');
+initializeGame();
