@@ -6,6 +6,7 @@ const questionsData = require('@assets/questions');
 
 const Player = require('@entities/player');
 const Room = require('@entities/room');
+const MESSAGE_TYPE = require('@shared/message-type');
 
 let rooms = [];
 let clientIdCounter = 0;
@@ -76,7 +77,7 @@ function webSocketHandler(wss){
   wss.on('connection', function connection(ws) {
     // Client arrives
     const clientId = ++clientIdCounter;
-    sendMessageToClient(ws, MESSAGE_TYPES.INTRODUCTION, 'Welcome to the question game! Your ID is ' + clientId);
+    sendMessageToClient(ws, MESSAGE_TYPE.INTRODUCTION, 'Welcome to the question game! Your ID is ' + clientId);
 
     // Find or create a room for the client
     let room = findOrCreateRoomForClient();
